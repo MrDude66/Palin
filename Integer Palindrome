@@ -1,0 +1,40 @@
+#include<stdio.h>
+int num,rev,num1,rem;
+
+void input()
+{
+printf("Enter the number:");
+scanf("%d", &num);
+return;
+}
+
+void reverse()
+{
+num1=num;
+rem=0;
+while(num1>0)
+{
+rem=num1%10;
+rev=rev*10+rem;
+num1=num1/10;
+}
+}
+
+void check_palindrome()
+ {
+if(num==rev)
+{
+printf("The given number is a palindrome. \n");
+}
+else
+{
+printf("The given number is not a palindrome. \n");
+}
+}
+
+void main()
+{input();
+reverse();
+check_palindrome();
+getch();
+}
